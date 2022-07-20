@@ -1,0 +1,25 @@
+.pnContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-width: 100%;
+}
+
+.pnFlagsMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pnFlagIcon {
+  min-width: 72px;
+  min-height: 56px;
+  max-width: 72px;
+  max-height: 56px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.menuContainer {
+  column-gap: 10px;
+}

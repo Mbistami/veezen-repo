@@ -1,0 +1,80 @@
+.label {
+  font-size: 17px;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.formItem * input:focus {
+  outline: none;
+}
+
+.formItem > input {
+  outline: none;
+}
+
+.formItem > input,
+.formItem > div > input {
+  height: 44px;
+  width: 100%;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding-left: 20px;
+  border-radius: 15px;
+}
+
+.formItem > input,
+.formItem > div > input > label {
+  font-size: 12px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 20px;
+}
+
+.signinButton {
+  background-color: white;
+  color: #0fb2ae;
+}
+
+.Button {
+  display: flex;
+  flex-direction: row;
+  width: 170px;
+  justify-content: center;
+  border-radius: 20px;
+  height: 60%;
+  align-items: center;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.Button:hover {
+  cursor: pointer;
+}
+
+.loginNavbarButton {
+  width: 222px;
+  height: 57px;
+  font-size: 17px;
+  border-radius: 40px;
+  background-color: #0fb2ae;
+  color: white;
+  box-shadow: 5px 5px 13px -5px #000000;
+}
+
+.connectButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}

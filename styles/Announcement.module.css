@@ -1,0 +1,42 @@
+.aContainer {
+  height: 99vh;
+  background: rgb(34, 90, 123);
+  background: linear-gradient(
+    220deg,
+    rgba(34, 90, 123, 1) 0%,
+    rgba(27, 137, 141, 1) 35%,
+    rgba(41, 110, 88, 1) 100%
+  );
+  margin-top: 15px;
+  width: 100vw;
+  display: block;
+  flex-direction: column;
+  padding: 4%;
+}
+
+.aTitle {
+  background-color: white;
+  color: #296e95;
+
+  text-align: center;
+  margin-top: 5vh;
+  padding: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 3px 9px 1px rgba(0, 0, 0, 0.57);
+  box-shadow: 2px 3px 9px 1px rgba(0, 0, 0, 0.57);
+}
+
+.aTitleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.aButton {
+  background-color: #2d76a0;
+  color: white;
+  cursor: pointer;
+}

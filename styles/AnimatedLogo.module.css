@@ -1,0 +1,91 @@
+.main-animated-logo {
+    min-width: 350px;
+    max-width: 350px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-logo-parts {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    max-width: 60px;
+    max-height: 60px;
+    position: relative;
+    align-items: center;
+}
+
+.main-logo-parts > div {
+    width: auto;
+    position: relative;
+    min-height: 31px;
+}
+
+.top-left-logo > img {
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+}
+
+.top-left-logo {
+    /* animation-duration: 1s;
+    animation-name: blink;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.14, .75, .2, 1.01);
+    animation-iteration-count: infinite; */
+    animation: blink 700ms infinite ease-in-out;
+}
+
+.top-right-logo {
+    animation: blink 800ms infinite ease-in-out;
+}
+
+.bottom-right-logo {
+    animation: blink 900ms infinite ease-in-out;
+}
+
+.bottom-left-logo {
+    animation: blink 1100ms infinite ease-in-out;
+}
+
+@keyframes blink {
+    0% {
+        opacity: .1;
+    }
+    
+    50% {
+        opacity: .4;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.top-right-logo > img {
+    bottom: 0;
+    position: absolute;
+}
+
+.bottom-left-logo > img {
+    top: 0;
+    right: 2px;
+    position: absolute;
+}
+
+.bottom-right-logo > img {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

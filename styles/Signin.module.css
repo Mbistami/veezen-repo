@@ -1,0 +1,40 @@
+.showPassword {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.showPassword:hover {
+  cursor: pointer;
+}
+
+.showablePassword {
+  width: 80%;
+  height: 44px;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding-left: 20px;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+.showablePassword:focus {
+  outline: none;
+}
+
+.showableControl {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 44px;
+}

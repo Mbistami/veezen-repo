@@ -1,0 +1,63 @@
+.CollabVeexpert {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  padding-top: 30px;
+  max-height: max-content;
+  height: fit-content;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.CollabVeexpert > div {
+  height: fit-content;
+  max-height: max-content;
+  width: fit-content;
+  border-radius: 20px;
+}
+
+.CollabVeexpert > div > span {
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+.Button {
+  display: flex;
+  flex-direction: row;
+  width: 170px;
+  justify-content: center;
+  border-radius: 20px;
+  height: 60%;
+  align-items: center;
+  border: none;
+}
+
+.loginNavbarButton {
+  width: 222px;
+  height: 47px;
+  font-size: 20px;
+  margin-top: 15px;
+  border-radius: 40px;
+  background-color: #057ba3;
+  color: white;
+  box-shadow: 5px 5px 13px -5px #000000;
+  font-family: "Josefin Sans", sans-serif;
+}
+.Button:hover {
+  cursor: pointer;
+  transition: scale(1.1);
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formButtonColor {
+  background-color: #0fb2ae;
+}

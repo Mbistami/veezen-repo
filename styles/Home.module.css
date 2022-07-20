@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+.homeContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.homeBigCircle {
+  width: 1078px;
+  height: 1036px;
+  background-color: #0070f3;
+  border-radius: 50%;
+  position: absolute;
+  right: -167px;
+  top: -186px;
+  background: rgb(5, 123, 163);
+  background: linear-gradient(
+    180deg,
+    rgba(5, 123, 163, 1) 0%,
+    rgba(10, 159, 168, 1) 35%,
+    rgba(15, 178, 156, 1) 100%
+  );
+  z-index: -1;
+}
+
+.leftPanel {
+  padding-left: 5%;
+  padding-top: 7%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.leftPanel > p {
+  font-family: "Josefin Sans", sans-serif;
+  color: #142047;
+}
+.bigTitle {
+  line-height: 90px;
+}
+@media (max-width: 1580px) {
+  .homeBigCircle {
+    width: 1000px;
+    height: 1000px;
+  }
+  .bigTitle {
+    font-size: 70px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .bigTitle {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .smallTitle {
+    font-size: 25px;
+    padding-left: 10px;
+  }
+  .innerImages {
+    display: none;
+  }
+}
+
+@media (min-width: 160em) {
+  .homeBigCircle {
+    width: 1478px;
+    height: 1436px;
+    right: -367px;
+    top: -366px;
+  }
+  .innerImages {
+    top: 45%;
+    left: 4%;
+  }
+  .getStartedEmail {
+    width: 660px;
+    padding: 40px;
+    background-color: #142047;
+  }
+}
+
+.getStarted {
+  display: flex;
+  flex-direction: row;
+  background-color: #0fb2ae;
+  width: 235px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  margin-top: 25px;
+}
+
+.getStarted > button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+}
+
+.getStartedContainer {
+  padding-top: 5%;
+}
+
+.getStartedEmail {
+  border: none;
+  height: 55px;
+  background-color: #f8f8f8;
+  width: 550px;
+  padding: 20px;
+  font-size: 17px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.innerImages {
+  min-width: 600px;
+  min-height: 400px;
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  max-width: 900px;
+  max-height: 600px;
+  bottom: 5%;
+  right: 18%;
+}
+
+.backgroundImagePreview {
+  background-color: aliceblue;
+  box-shadow: 16px -12px 15px 0px rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+}
+
+.backgroundImagePreview_1 {
+  position: absolute;
+}
+
+.backgroundImagePreview_ {
+  background-color: aliceblue;
+  box-shadow: 16px -12px 15px 0px rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 17%;
+}
+
+.backgroundImagePreview__ {
+  background-color: aliceblue;
+  box-shadow: 16px -12px 15px 0px rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+  width: auto;
+  display: inline-block;
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+}
+
+.warning {
+  color: white;
+  font-size: 12px;
+
+  margin-top: 10px;
+  background: rgb(5, 123, 163);
+  background: linear-gradient(
+    -90deg,
+    rgba(5, 123, 163, 1) 0%,
+    rgba(10, 159, 168, 1) 35%,
+    rgba(15, 178, 156, 1) 100%
+  );
+  height: 45px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  margin-top: 10vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.warning > p {
+  padding: 90px;
+  padding-left: 10px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.warningContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.warning:hover {
+  height: 55px;
+  cursor: pointer;
+}
+
+.warningContainer > div {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
