@@ -80,7 +80,7 @@ const DashboardPage = () => {
       />
       {data?.questions && (
         <Mood
-          open={true}
+          open={false}
           setOpen={setOpen}
           type="battery"
           questions={data?.questions}
