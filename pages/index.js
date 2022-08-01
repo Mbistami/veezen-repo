@@ -8,15 +8,37 @@ import LoadingScreen from "../components/LoadingScreen";
 
 export default function Home() {
   const router = useRouter();
-  const [user, setUser] = useState();
-  let { loading, data } = useApi(
-    "https://api.veezen.com/api/v1/account/auth/getUserUsingJwt"
-  );
+
+  const [user, setUser] = useAppContext();
+  // let { loading, data } = useApi(
+  //   `http://localhost:3000/session?uuid=${router.query?.session_id}`
+  // );
   useEffect(() => {
-    setUser(data);
-    router.prefetch("/home");
-    if (user && user.isLogged == true) router.push("/dashboard");
-  }, [loading, data, setUser, router, user]);
+    // setUser(data);
+    console.log(router.query?.session_id);
+    fetch(`http://localhost:3000/session?uuid=${router.query?.session_id}`, {
+      method: "GET",
+    }).then((res) => {
+      if (res.status === 200 && router.query?.session_id !== undefined)
+        res.json().then((data) => {
+          const { authorization } = data;
+          fetch(`https://api.veezen.com/api/v1/account/auth/getUserUsingJwt`, {
+            method: "GET",
+            headers: { authorization },
+          }).then((res) => {
+            if (res.status === 200) {
+              res
+                .json()
+                .then((data) =>
+                  setUser({ ...data, Authorization: authorization })
+                );
+            }
+          });
+          setUser(data);
+        });
+    });
+    if (user) router.push("/dashboard");
+  }, [router]);
   if (!user) return <LoadingScreen />;
   return (
     <>
