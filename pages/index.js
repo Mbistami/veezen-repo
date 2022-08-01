@@ -25,13 +25,14 @@ export default function Home() {
           fetch(`https://api.veezen.com/api/v1/account/auth/getUserUsingJwt`, {
             method: "GET",
             headers: { authorization },
-          }).then((res) => {
-            if (res.status === 200) {
-              res
-                .json()
-                .then((data) =>
-                  setUser({ ...data, Authorization: authorization })
-                );
+          }).then((res_) => {
+            console.log(res);
+            if (res_.status === 200) {
+              res_.json().then((data) => {
+                setUser({ ...data, Authorization: authorization });
+                console.log("LOGGED IN REDIRECTION");
+                router.push("/dashboard");
+              });
             }
           });
           setUser(data);
