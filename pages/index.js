@@ -16,9 +16,12 @@ export default function Home() {
   useEffect(() => {
     // setUser(data);
     console.log(router.query?.session_id);
-    fetch(`http://localhost:3000/session?uuid=${router.query?.session_id}`, {
-      method: "GET",
-    }).then((res) => {
+    fetch(
+      `${process.env.API_SESSION_LINK}/session?uuid=${router.query?.session_id}`,
+      {
+        method: "GET",
+      }
+    ).then((res) => {
       if (res.status === 200 && router.query?.session_id !== undefined)
         res.json().then((data) => {
           const { authorization } = data;
@@ -43,7 +46,7 @@ export default function Home() {
   if (!user) return <LoadingScreen />;
   return (
     <>
-      <div className={styles.container}></div>
+      <LoadingScreen />
     </>
   );
 }

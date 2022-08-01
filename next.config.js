@@ -9,6 +9,10 @@ const nextConfig = {
       "media.discordapp.net",
     ],
   },
+  env: {
+    API_AUTH_LINK: "https://api.veezen.com/api/v1/account",
+    API_SESSION_LINK: "https://veezen-backend.herokuapp.com/",
+  },
 };
 
 module.exports = nextConfig;

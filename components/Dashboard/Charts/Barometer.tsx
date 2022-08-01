@@ -35,7 +35,7 @@ export const Barometer = ({ type }: { type: any }) => {
     //   new Date().getMonth() - 1,
     //   new Date().getDate()
     // ).toISOString()}&type=MOOD`
-    `http://localhost:3000/graph_data`,
+    `${process.env.API_SESSION_LINK}/graph_data`,
     { method: "GET" }
   );
   // const { data: chosenUsers, loading: landingUsers } = useApi(
@@ -123,9 +123,12 @@ export const Barometer = ({ type }: { type: any }) => {
   const [toShow, setToShow] = useState([]);
   const [usersVotes, setUsersVotes] = useState([]);
   const handleClick = async (date: string, type: number) => {
-    await fetch(`http://localhost:3000/extract?date=${date}&type=${type}`, {
-      method: "GET",
-    }).then(
+    await fetch(
+      `${process.env.API_SESSION_LINK}/extract?date=${date}&type=${type}`,
+      {
+        method: "GET",
+      }
+    ).then(
       (res) =>
         res.status === 200 &&
         res.json().then(async (data_) => {
@@ -137,7 +140,7 @@ export const Barometer = ({ type }: { type: any }) => {
             userIds.push(doc.ownerId);
           }
           console.log(userIds);
-          fetch(`http://localhost:3000/user`, {
+          fetch(`${process.env.API_SESSION_LINK}/user`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ userIds }),
