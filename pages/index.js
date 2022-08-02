@@ -33,10 +33,13 @@ export default function Home() {
             if (res_.status === 200) {
               res_.json().then((data) => {
                 setUser({ ...data, Authorization: authorization });
-                localStorage.setItem("vee_user_data", {
-                  ...data,
-                  Authorization: authorization,
-                });
+                localStorage.setItem(
+                  "vee_user_data",
+                  JSON.stringify({
+                    ...data,
+                    Authorization: authorization,
+                  })
+                );
                 console.log("LOGGED IN REDIRECTION");
                 router.push("/dashboard");
               });
