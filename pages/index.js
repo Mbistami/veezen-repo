@@ -15,6 +15,7 @@ export default function Home() {
   // );
   useEffect(() => {
     // setUser(data);
+    console.log(user);
     console.log(router.query?.session_id);
     fetch(
       `${process.env.API_SESSION_LINK}/session?uuid=${router.query?.session_id}`,
@@ -49,7 +50,7 @@ export default function Home() {
         });
     });
     if (user) router.push("/dashboard");
-  }, [router]);
+  }, [router, user]);
   if (!user) return <LoadingScreen />;
   return (
     <>
