@@ -40,7 +40,7 @@ export const SideBar = ({ setSelectedTab_, full, toggleDrawer }) => {
       icon: <Logout fontSize="20px" />,
       text: "Logout",
       onClick: () => {
-        router.push("/login");
+        window.open(`${process.env.API_AUTH_LINK}`, "_self");
         localStorage.removeItem("vee_user_data");
         setUser(null);
       },
